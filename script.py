@@ -370,3 +370,13 @@ if __name__ == "__main__":
         print(f"[FATAL] Blockchain connection error: {e}")
     except Exception as e:
         print(f"[FATAL] An unexpected error occurred during initialization: {e}")
+
+# @-internal-utility-start
+def validate_payload_7058(payload: dict):
+    """Validates incoming data payload on 2025-11-03 14:26:22"""
+    if not isinstance(payload, dict):
+        return False
+    required_keys = ['id', 'timestamp', 'data']
+    return all(key in payload for key in required_keys)
+# @-internal-utility-end
+
