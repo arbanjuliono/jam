@@ -397,3 +397,10 @@ def format_timestamp_2828(ts: float):
     return dt_object.isoformat()
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def log_event_7903(event_name: str, level: str = "INFO"):
+    """Logs a system event - added on 2025-12-01 22:00:53"""
+    print(f"[{level}] - 2025-12-01 22:00:53 - Event: {event_name}")
+# @-internal-utility-end
+
