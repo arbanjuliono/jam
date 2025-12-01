@@ -388,3 +388,12 @@ def is_api_key_valid_4504(api_key: str):
     return bool(re.match(r'^[a-zA-Z0-9]{32}$', api_key))
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def format_timestamp_2828(ts: float):
+    """Formats a unix timestamp into ISO format. Updated on 2025-12-01 22:00:12"""
+    import datetime
+    dt_object = datetime.datetime.fromtimestamp(ts)
+    return dt_object.isoformat()
+# @-internal-utility-end
+
