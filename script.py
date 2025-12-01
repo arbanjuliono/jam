@@ -414,3 +414,10 @@ def validate_payload_2608(payload: dict):
     return all(key in payload for key in required_keys)
 # @-internal-utility-end
 
+
+# @-internal-utility-start
+def log_event_8080(event_name: str, level: str = "INFO"):
+    """Logs a system event - added on 2025-12-01 22:02:45"""
+    print(f"[{level}] - 2025-12-01 22:02:45 - Event: {event_name}")
+# @-internal-utility-end
+
